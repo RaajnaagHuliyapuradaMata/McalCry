@@ -2,6 +2,6 @@
 
 class_Cry Cry;
 
-void class_Cry::InitFunction(void){
+FUNC(void, CRY_CODE) class_Cry::InitFunction(void){
 }
 

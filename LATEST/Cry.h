@@ -4,7 +4,7 @@
 
 class class_Cry{
    public:
-      void InitFunction(void);
+      FUNC(void, CRY_CODE) InitFunction(void);
 };
 
 extern class_Cry Cry;
