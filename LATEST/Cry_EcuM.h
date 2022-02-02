@@ -1,14 +1,15 @@
+#pragma once
 /*****************************************************/
-/* File   : Cry.cpp                                  */
+/* File   : Cry_EcuM.h                               */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "Cry.h"
+#include "Compiler_Cfg_Cry.h"
 
-#include "Cry_EcuM.h"
+#include "EcuM_Client.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -21,6 +22,13 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
+class class_Cry_EcuM : public class_EcuM_Client{
+   public:
+/*****************************************************/
+/* FUNCTIONS                                         */
+/*****************************************************/
+      FUNC(void, CRY_CODE) InitFunction(void);
+};
 
 /*****************************************************/
 /* CONSTS                                            */
@@ -33,69 +41,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_Cry Cry;
-class_Cry_EcuM Cry_EcuM;
-class_Cry_EcuM *Cry_EcuM_ptr = &Cry_EcuM;
-
-/*****************************************************/
-/* FUNCTIONS                                         */
-/*****************************************************/
-FUNC(void, CRY_CODE) class_Cry_EcuM::InitFunction(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::GetVersionInfo(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::ProcessJob(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::CancelJob(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeyElementSet(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeyValidSet(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeySetValid(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeyElementGet(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeyElementCopy(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeyCopy(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeyElementIdsGet(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::RandomSeed(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeyGenerate(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeyDerive(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeyExchangeCalcPubVal(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::KeyExchangeCalcSecret(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::CertificateParse(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::CertificateVerify(void){
-}
-
-FUNC(void, CRY_CODE) class_Cry::MainFunction(void){
-}
+extern class_Cry_EcuM *Cry_EcuM_ptr;
 
 /*****************************************************/
 /* EOF                                               */

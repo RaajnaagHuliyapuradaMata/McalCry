@@ -26,7 +26,6 @@ class class_Cry{
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, CRY_CODE) InitFunction          (void);
       FUNC(void, CRY_CODE) GetVersionInfo        (void);
       FUNC(void, CRY_CODE) ProcessJob            (void);
       FUNC(void, CRY_CODE) CancelJob             (void);
