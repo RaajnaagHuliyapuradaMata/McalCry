@@ -33,9 +33,9 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_Cry Cry;
 class_Cry_EcuM Cry_EcuM;
-class_Cry_EcuM *Cry_EcuM_ptr = &Cry_EcuM;
+class_EcuM_Client *EcuM_Client_ptr_Cry = &Cry_EcuM;
+class_Cry Cry;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
