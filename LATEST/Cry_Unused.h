@@ -1,15 +1,14 @@
 #pragma once
 /*****************************************************/
-/* File   : Cry_EcuM.h                               */
+/* File   : Cry_Unused.h                             */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
+#include "Std_Types.h"
 #include "Compiler_Cfg_Cry.h"
-
-#include "EcuM_Client.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -22,13 +21,28 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class interface_Cry_EcuM : public interface_EcuM_Client{
+class class_Cry_Unused{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, CRY_CODE) InitFunction   (void);
-      FUNC(void, CRY_CODE) DeInitFunction (void);
+      FUNC(void, CRY_CODE) GetVersionInfo        (void);
+      FUNC(void, CRY_CODE) ProcessJob            (void);
+      FUNC(void, CRY_CODE) CancelJob             (void);
+      FUNC(void, CRY_CODE) KeyElementSet         (void);
+      FUNC(void, CRY_CODE) KeyValidSet           (void);
+      FUNC(void, CRY_CODE) KeySetValid           (void);
+      FUNC(void, CRY_CODE) KeyElementGet         (void);
+      FUNC(void, CRY_CODE) KeyElementCopy        (void);
+      FUNC(void, CRY_CODE) KeyCopy               (void);
+      FUNC(void, CRY_CODE) KeyElementIdsGet      (void);
+      FUNC(void, CRY_CODE) RandomSeed            (void);
+      FUNC(void, CRY_CODE) KeyGenerate           (void);
+      FUNC(void, CRY_CODE) KeyDerive             (void);
+      FUNC(void, CRY_CODE) KeyExchangeCalcPubVal (void);
+      FUNC(void, CRY_CODE) KeyExchangeCalcSecret (void);
+      FUNC(void, CRY_CODE) CertificateParse      (void);
+      FUNC(void, CRY_CODE) CertificateVerify     (void);
 };
 
 /*****************************************************/
@@ -42,7 +56,7 @@ class interface_Cry_EcuM : public interface_EcuM_Client{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern interface_Cry_EcuM *EcuM_Client_ptr_Cry;
+//extern class_Cry Cry;
 
 /*****************************************************/
 /* EOF                                               */

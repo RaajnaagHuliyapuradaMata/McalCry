@@ -6,9 +6,10 @@
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "Cry.h"
-
+#include "module.h"
 #include "Cry_EcuM.h"
+#include "Cry_SchM.h"
+#include "Cry_Unused.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -21,6 +22,16 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
+class module_Cry:
+      public abstract_module
+   ,  public interface_Cry_EcuM
+   ,  public interface_Cry_SchM
+{
+   public:
+      FUNC(void, CRY_CODE) InitFunction   (void);
+      FUNC(void, CRY_CODE) DeInitFunction (void);
+      FUNC(void, CRY_CODE) MainFunction   (void);
+};
 
 /*****************************************************/
 /* CONSTS                                            */
@@ -33,68 +44,72 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_Cry_EcuM Cry_EcuM;
-class_EcuM_Client *EcuM_Client_ptr_Cry = &Cry_EcuM;
-class_Cry Cry;
+module_Cry Cry;
+
+interface_Cry_EcuM *EcuM_Client_ptr_Cry = &Cry;
+interface_Cry_SchM *SchM_Client_ptr_Cry = &Cry;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, CRY_CODE) class_Cry_EcuM::InitFunction(void){
+FUNC(void, CRY_CODE) module_Cry::InitFunction(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::GetVersionInfo(void){
+FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::ProcessJob(void){
+FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::CancelJob(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::GetVersionInfo(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeyElementSet(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::ProcessJob(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeyValidSet(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::CancelJob(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeySetValid(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeyElementSet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeyElementGet(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeyValidSet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeyElementCopy(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeySetValid(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeyCopy(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeyElementGet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeyElementIdsGet(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeyElementCopy(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::RandomSeed(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeyCopy(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeyGenerate(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeyElementIdsGet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeyDerive(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::RandomSeed(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeyExchangeCalcPubVal(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeyGenerate(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::KeyExchangeCalcSecret(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeyDerive(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::CertificateParse(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeyExchangeCalcPubVal(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::CertificateVerify(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::KeyExchangeCalcSecret(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry::MainFunction(void){
+FUNC(void, CRY_CODE) class_Cry_Unused::CertificateParse(void){
+}
+
+FUNC(void, CRY_CODE) class_Cry_Unused::CertificateVerify(void){
 }
 
 /*****************************************************/

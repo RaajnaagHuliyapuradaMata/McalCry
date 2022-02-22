@@ -1,14 +1,15 @@
 #pragma once
 /*****************************************************/
-/* File   : Cry.h                                    */
+/* File   : Cry_SchM.h                               */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "Std_Types.h"
 #include "Compiler_Cfg_Cry.h"
+
+#include "SchM_Client.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -21,29 +22,12 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class class_Cry{
+class interface_Cry_SchM : public interface_SchM_Client{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, CRY_CODE) GetVersionInfo        (void);
-      FUNC(void, CRY_CODE) ProcessJob            (void);
-      FUNC(void, CRY_CODE) CancelJob             (void);
-      FUNC(void, CRY_CODE) KeyElementSet         (void);
-      FUNC(void, CRY_CODE) KeyValidSet           (void);
-      FUNC(void, CRY_CODE) KeySetValid           (void);
-      FUNC(void, CRY_CODE) KeyElementGet         (void);
-      FUNC(void, CRY_CODE) KeyElementCopy        (void);
-      FUNC(void, CRY_CODE) KeyCopy               (void);
-      FUNC(void, CRY_CODE) KeyElementIdsGet      (void);
-      FUNC(void, CRY_CODE) RandomSeed            (void);
-      FUNC(void, CRY_CODE) KeyGenerate           (void);
-      FUNC(void, CRY_CODE) KeyDerive             (void);
-      FUNC(void, CRY_CODE) KeyExchangeCalcPubVal (void);
-      FUNC(void, CRY_CODE) KeyExchangeCalcSecret (void);
-      FUNC(void, CRY_CODE) CertificateParse      (void);
-      FUNC(void, CRY_CODE) CertificateVerify     (void);
-      FUNC(void, CRY_CODE) MainFunction          (void);
+      FUNC(void, CRY_CODE) MainFunction(void);
 };
 
 /*****************************************************/
@@ -57,7 +41,7 @@ class class_Cry{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_Cry Cry;
+extern interface_Cry_SchM *SchM_Client_ptr_Cry;
 
 /*****************************************************/
 /* EOF                                               */
