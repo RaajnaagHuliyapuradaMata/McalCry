@@ -24,8 +24,6 @@
 /*****************************************************/
 class module_Cry:
       public abstract_module
-   ,  public interface_Cry_EcuM
-   ,  public interface_Cry_SchM
 {
    public:
       FUNC(void, CRY_CODE) InitFunction   (void);
@@ -44,10 +42,9 @@ class module_Cry:
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_Cry Cry;
-
-interface_Cry_EcuM *EcuM_Client_ptr_Cry = &Cry;
-interface_Cry_SchM *SchM_Client_ptr_Cry = &Cry;
+module_Cry     Cry;
+infEcuMClient* gptrinfEcuMClient_Cry = &Cry;
+infSchMClient* gptrinfSchMClient_Cry = &Cry;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
