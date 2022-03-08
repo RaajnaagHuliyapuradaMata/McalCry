@@ -32,7 +32,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern interface_Cry_SchM *SchM_Client_ptr_Cry;
+extern infSchMClient *gptrinfSchMClient_Cry;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
