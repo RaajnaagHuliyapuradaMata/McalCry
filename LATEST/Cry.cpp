@@ -7,8 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-#include "Cry_EcuM.h"
-#include "Cry_SchM.h"
+#include "infCry_EcuM.h"
+#include "infCry_SchM.h"
 #include "Cry_Unused.h"
 
 /*****************************************************/
@@ -28,6 +28,7 @@ class module_Cry:
    public:
       FUNC(void, CRY_CODE) InitFunction   (void);
       FUNC(void, CRY_CODE) DeInitFunction (void);
+      FUNC(void, CRY_CODE) GetVersionInfo (void);
       FUNC(void, CRY_CODE) MainFunction   (void);
 };
 
@@ -44,6 +45,7 @@ class module_Cry:
 /*****************************************************/
 module_Cry     Cry;
 infEcuMClient* gptrinfEcuMClient_Cry = &Cry;
+infDcmClient*  gptrinfDcmClient_Cry  = &Cry;
 infSchMClient* gptrinfSchMClient_Cry = &Cry;
 
 /*****************************************************/
@@ -53,6 +55,9 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(void){
 }
 
 FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
+}
+
+FUNC(void, CRY_CODE) module_Cry::GetVersionInfo(void){
 }
 
 FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
