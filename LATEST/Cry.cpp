@@ -8,8 +8,8 @@
 /*****************************************************/
 #include "module.h"
 #include "infCry_EcuM.h"
+#include "infCry_Dcm.h"
 #include "infCry_SchM.h"
-#include "Cry_Unused.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -63,8 +63,7 @@ FUNC(void, CRY_CODE) module_Cry::GetVersionInfo(void){
 FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::GetVersionInfo(void){
-}
+#include "Cry_Unused.h"
 
 FUNC(void, CRY_CODE) class_Cry_Unused::ProcessJob(void){
 }
