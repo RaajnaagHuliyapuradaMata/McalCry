@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "infCry_Version.h"
+#include "Cry_Cfg.h"
 #include "infCry_EcuM.h"
 #include "infCry_Dcm.h"
 #include "infCry_SchM.h"
@@ -15,10 +15,19 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define CRY_AR_RELEASE_MAJOR_VERSION                                           4
+#define CRY_AR_RELEASE_MINOR_VERSION                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
+#if(CRY_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
+   #error "Incompatible CRY_AR_RELEASE_MAJOR_VERSION!"
+#endif
+
+#if(CRY_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
+   #error "Incompatible CRY_AR_RELEASE_MINOR_VERSION!"
+#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -61,6 +70,11 @@ FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
 }
 
 FUNC(void, CRY_CODE) module_Cry::GetVersionInfo(void){
+#if(STD_ON == Cry_DevErrorDetect)
+//TBD: API parameter check
+   Det_ReportError(
+   );
+#endif
 }
 
 FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
