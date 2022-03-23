@@ -40,6 +40,16 @@ class module_Cry:
       FUNC(void, CRY_CODE) DeInitFunction (void);
       FUNC(void, CRY_CODE) GetVersionInfo (void);
       FUNC(void, CRY_CODE) MainFunction   (void);
+
+   private:
+      CONST(Std_TypeVersionInfo, CRY_CONST) VersionInfo = {
+            0x0000
+         ,  0xFFFF
+         ,  0x01
+         ,  '0'
+         ,  '1'
+         ,  '0'
+      };
 };
 
 /******************************************************************************/
