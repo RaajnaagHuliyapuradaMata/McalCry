@@ -6,11 +6,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.h"
-#include "CfgCry.h"
-#include "infCry_EcuM.h"
-#include "infCry_Dcm.h"
-#include "infCry_SchM.h"
+#include "module.hpp"
+#include "CfgCry.hpp"
+#include "infCry_EcuM.hpp"
+#include "infCry_Dcm.hpp"
+#include "infCry_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -90,7 +90,7 @@ FUNC(void, CRY_CODE) module_Cry::GetVersionInfo(void){
 FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
 }
 
-#include "Cry_Unused.h"
+#include "Cry_Unused.hpp"
 
 FUNC(void, CRY_CODE) class_Cry_Unused::ProcessJob(void){
 }
