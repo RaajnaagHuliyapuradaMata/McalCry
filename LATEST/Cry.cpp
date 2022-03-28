@@ -90,7 +90,25 @@ FUNC(void, CRY_CODE) module_Cry::GetVersionInfo(void){
 FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
 }
 
-#include "Cry_Unused.hpp"
+class class_Cry_Unused{
+   public:
+      FUNC(void, CRY_CODE) ProcessJob            (void);
+      FUNC(void, CRY_CODE) CancelJob             (void);
+      FUNC(void, CRY_CODE) KeyElementSet         (void);
+      FUNC(void, CRY_CODE) KeyValidSet           (void);
+      FUNC(void, CRY_CODE) KeySetValid           (void);
+      FUNC(void, CRY_CODE) KeyElementGet         (void);
+      FUNC(void, CRY_CODE) KeyElementCopy        (void);
+      FUNC(void, CRY_CODE) KeyCopy               (void);
+      FUNC(void, CRY_CODE) KeyElementIdsGet      (void);
+      FUNC(void, CRY_CODE) RandomSeed            (void);
+      FUNC(void, CRY_CODE) KeyGenerate           (void);
+      FUNC(void, CRY_CODE) KeyDerive             (void);
+      FUNC(void, CRY_CODE) KeyExchangeCalcPubVal (void);
+      FUNC(void, CRY_CODE) KeyExchangeCalcSecret (void);
+      FUNC(void, CRY_CODE) CertificateParse      (void);
+      FUNC(void, CRY_CODE) CertificateVerify     (void);
+};
 
 FUNC(void, CRY_CODE) class_Cry_Unused::ProcessJob(void){
 }
