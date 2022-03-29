@@ -7,7 +7,6 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.hpp"
-#include "CfgCry.hpp"
 #include "infCry_EcuM.hpp"
 #include "infCry_Dcm.hpp"
 #include "infCry_SchM.hpp"
@@ -36,37 +35,40 @@ class module_Cry:
       public abstract_module
 {
    public:
+      module_Cry(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
+      }
       FUNC(void, CRY_CODE) InitFunction   (void);
       FUNC(void, CRY_CODE) DeInitFunction (void);
-      FUNC(void, CRY_CODE) GetVersionInfo (void);
       FUNC(void, CRY_CODE) MainFunction   (void);
-
-   private:
-      CONST(Std_TypeVersionInfo, CRY_CONST) VersionInfo = {
-            0x0000
-         ,  0xFFFF
-         ,  0x01
-         ,  '0'
-         ,  '1'
-         ,  '0'
-      };
 };
+
+extern VAR(module_Cry, CRY_VAR) Cry;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
+CONSTP2VAR(infEcuMClient, CRY_VAR, CRY_CONST) gptrinfEcuMClient_Cry = &Cry;
+CONSTP2VAR(infDcmClient,  CRY_VAR, CRY_CONST) gptrinfDcmClient_Cry  = &Cry;
+CONSTP2VAR(infSchMClient, CRY_VAR, CRY_CONST) gptrinfSchMClient_Cry = &Cry;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
+#include "CfgCry.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_Cry, CRY_VAR) Cry;
-CONSTP2VAR(infEcuMClient, CRY_VAR, CRY_CONST) gptrinfEcuMClient_Cry = &Cry;
-CONSTP2VAR(infDcmClient,  CRY_VAR, CRY_CONST) gptrinfDcmClient_Cry  = &Cry;
-CONSTP2VAR(infSchMClient, CRY_VAR, CRY_CONST) gptrinfSchMClient_Cry = &Cry;
+VAR(module_Cry, CRY_VAR) Cry(
+   {
+         0x0000
+      ,  0xFFFF
+      ,  0x01
+      ,  '0'
+      ,  '1'
+      ,  '0'
+   }
+);
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
@@ -77,14 +79,6 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(void){
 
 FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
    Cry.IsInitDone = E_NOT_OK;
-}
-
-FUNC(void, CRY_CODE) module_Cry::GetVersionInfo(void){
-#if(STD_ON == Cry_DevErrorDetect)
-//TBD: API parameter check
-   Det_ReportError(
-   );
-#endif
 }
 
 FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
