@@ -6,7 +6,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.hpp"
+#include "Module.hpp"
 #include "infCry_EcuM.hpp"
 #include "infCry_Dcm.hpp"
 #include "infCry_SchM.hpp"
@@ -37,6 +37,9 @@ class module_Cry:
    public:
       module_Cry(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
       }
+      FUNC(void, _CODE) InitFunction(
+         CONSTP2CONST(CfgModule_TypeAbstract, _CONFIG_DATA, _APPL_CONST) lptrCfgModule
+      );
       FUNC(void, CRY_CODE) InitFunction   (void);
       FUNC(void, CRY_CODE) DeInitFunction (void);
       FUNC(void, CRY_CODE) MainFunction   (void);
@@ -73,7 +76,19 @@ VAR(module_Cry, CRY_VAR) Cry(
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, CRY_CODE) module_Cry::InitFunction(void){
+FUNC(void, CRY_CODE) module_Cry::InitFunction(
+   CONSTP2CONST(CfgCry_Type, CFGCRY_CONFIG_DATA, CFGCRY_APPL_CONST) lptrCfgCry
+){
+   if(NULL_PTR == lptrCfgCry){
+#if(STD_ON == Cry_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+// check lptrCfgCry for memory faults
+// use PBcfg_Cry as back-up configuration
+   }
    Cry.IsInitDone = E_OK;
 }
 
