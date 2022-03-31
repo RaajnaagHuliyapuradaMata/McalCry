@@ -37,10 +37,9 @@ class module_Cry:
    public:
       module_Cry(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
       }
-      FUNC(void, _CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, _CONFIG_DATA, _APPL_CONST) lptrCfgModule
+      FUNC(void, CRY_CODE) InitFunction(
+         CONSTP2CONST(CfgModule_TypeAbstract, CRY_CONFIG_DATA, CRY_APPL_CONST) lptrCfgModule
       );
-      FUNC(void, CRY_CODE) InitFunction   (void);
       FUNC(void, CRY_CODE) DeInitFunction (void);
       FUNC(void, CRY_CODE) MainFunction   (void);
 };
@@ -77,23 +76,39 @@ VAR(module_Cry, CRY_VAR) Cry(
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, CRY_CODE) module_Cry::InitFunction(
-   CONSTP2CONST(CfgCry_Type, CFGCRY_CONFIG_DATA, CFGCRY_APPL_CONST) lptrCfgCry
+   CONSTP2CONST(CfgModule_TypeAbstract, CRY_CONFIG_DATA, CRY_APPL_CONST) lptrCfgModule
 ){
-   if(NULL_PTR == lptrCfgCry){
+   if(E_OK == IsInitDone){
 #if(STD_ON == Cry_DevErrorDetect)
       Det_ReportError(
       );
 #endif
    }
    else{
-// check lptrCfgCry for memory faults
+      if(NULL_PTR == lptrCfgModule){
+#if(STD_ON == Cry_DevErrorDetect)
+         Det_ReportError(
+         );
+#endif
+      }
+      else{
+// check lptrCfgModule for memory faults
 // use PBcfg_Cry as back-up configuration
+      }
+      IsInitDone = E_OK;
    }
-   Cry.IsInitDone = E_OK;
 }
 
 FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
-   Cry.IsInitDone = E_NOT_OK;
+   if(E_OK != IsInitDone){
+#if(STD_ON == Cry_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+      IsInitDone = E_NOT_OK;
+   }
 }
 
 FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
