@@ -78,6 +78,7 @@ VAR(module_Cry, CRY_VAR) Cry(
 FUNC(void, CRY_CODE) module_Cry::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, CRY_CONFIG_DATA, CRY_APPL_CONST) lptrCfgModule
 ){
+#if(STD_ON == Cry_InitCheck)
    if(E_OK == IsInitDone){
 #if(STD_ON == Cry_DevErrorDetect)
       Det_ReportError(
@@ -85,6 +86,7 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
 #endif
    }
    else{
+#endif
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == Cry_DevErrorDetect)
          Det_ReportError(
@@ -96,10 +98,13 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
 // use PBcfg_Cry as back-up configuration
       }
       IsInitDone = E_OK;
+#if(STD_ON == Cry_InitCheck)
    }
+#endif
 }
 
 FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
+#if(STD_ON == Cry_InitCheck)
    if(E_OK != IsInitDone){
 #if(STD_ON == Cry_DevErrorDetect)
       Det_ReportError(
@@ -107,11 +112,26 @@ FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
 #endif
    }
    else{
+#endif
       IsInitDone = E_NOT_OK;
+#if(STD_ON == Cry_InitCheck)
    }
+#endif
 }
 
 FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
+#if(STD_ON == Cry_InitCheck)
+   if(E_OK != IsInitDone){
+#if(STD_ON == Cry_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+#endif
+#if(STD_ON == Cry_InitCheck)
+   }
+#endif
 }
 
 class class_Cry_Unused{
