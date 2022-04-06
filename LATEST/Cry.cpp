@@ -14,18 +14,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define CRY_AR_RELEASE_MAJOR_VERSION                                           4
-#define CRY_AR_RELEASE_MINOR_VERSION                                           3
+#define CRY_AR_RELEASE_VERSION_MAJOR                                           4
+#define CRY_AR_RELEASE_VERSION_MINOR                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(CRY_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
-   #error "Incompatible CRY_AR_RELEASE_MAJOR_VERSION!"
+#if(CRY_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible CRY_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(CRY_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
-   #error "Incompatible CRY_AR_RELEASE_MINOR_VERSION!"
+#if(CRY_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible CRY_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -63,8 +63,10 @@ CONSTP2VAR(infSchMClient, CRY_VAR, CRY_CONST) gptrinfSchMClient_Cry = &Cry;
 /******************************************************************************/
 VAR(module_Cry, CRY_VAR) Cry(
    {
-         0x0000
-      ,  0xFFFF
+         CRY_AR_RELEASE_VERSION_MAJOR
+      ,  CRY_AR_RELEASE_VERSION_MINOR
+      ,  0x00
+      ,  0xFF
       ,  0x01
       ,  '0'
       ,  '1'
