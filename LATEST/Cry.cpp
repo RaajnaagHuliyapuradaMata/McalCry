@@ -96,8 +96,14 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
 #endif
       }
       else{
+         if(STD_LOW){
 // check lptrCfgModule for memory faults
-// use PBcfg_Cry as back-up configuration
+            lptrCfg = lptrCfgModule;
+         }
+         else{
+// use PBcfg_CanIf as back-up configuration
+            lptrCfg = PBcfg_CanIf;
+         }
       }
       IsInitDone = E_OK;
 #if(STD_ON == Cry_InitCheck)
