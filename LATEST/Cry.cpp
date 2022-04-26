@@ -31,8 +31,29 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class class_Cry_Functionality{
+   public:
+      FUNC(void, CRY_CODE) ProcessJob            (void);
+      FUNC(void, CRY_CODE) CancelJob             (void);
+      FUNC(void, CRY_CODE) KeyElementSet         (void);
+      FUNC(void, CRY_CODE) KeyValidSet           (void);
+      FUNC(void, CRY_CODE) KeySetValid           (void);
+      FUNC(void, CRY_CODE) KeyElementGet         (void);
+      FUNC(void, CRY_CODE) KeyElementCopy        (void);
+      FUNC(void, CRY_CODE) KeyCopy               (void);
+      FUNC(void, CRY_CODE) KeyElementIdsGet      (void);
+      FUNC(void, CRY_CODE) RandomSeed            (void);
+      FUNC(void, CRY_CODE) KeyGenerate           (void);
+      FUNC(void, CRY_CODE) KeyDerive             (void);
+      FUNC(void, CRY_CODE) KeyExchangeCalcPubVal (void);
+      FUNC(void, CRY_CODE) KeyExchangeCalcSecret (void);
+      FUNC(void, CRY_CODE) CertificateParse      (void);
+      FUNC(void, CRY_CODE) CertificateVerify     (void);
+};
+
 class module_Cry:
       public abstract_module
+   ,  public class_Cry_Functionality
 {
    public:
       module_Cry(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
@@ -84,6 +105,10 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
    if(E_OK == IsInitDone){
 #if(STD_ON == Cry_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -92,6 +117,10 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == Cry_DevErrorDetect)
          Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
          );
 #endif
       }
@@ -116,6 +145,10 @@ FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == Cry_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -132,6 +165,10 @@ FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == Cry_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -142,72 +179,52 @@ FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
 #endif
 }
 
-class class_Cry_Unused{
-   public:
-      FUNC(void, CRY_CODE) ProcessJob            (void);
-      FUNC(void, CRY_CODE) CancelJob             (void);
-      FUNC(void, CRY_CODE) KeyElementSet         (void);
-      FUNC(void, CRY_CODE) KeyValidSet           (void);
-      FUNC(void, CRY_CODE) KeySetValid           (void);
-      FUNC(void, CRY_CODE) KeyElementGet         (void);
-      FUNC(void, CRY_CODE) KeyElementCopy        (void);
-      FUNC(void, CRY_CODE) KeyCopy               (void);
-      FUNC(void, CRY_CODE) KeyElementIdsGet      (void);
-      FUNC(void, CRY_CODE) RandomSeed            (void);
-      FUNC(void, CRY_CODE) KeyGenerate           (void);
-      FUNC(void, CRY_CODE) KeyDerive             (void);
-      FUNC(void, CRY_CODE) KeyExchangeCalcPubVal (void);
-      FUNC(void, CRY_CODE) KeyExchangeCalcSecret (void);
-      FUNC(void, CRY_CODE) CertificateParse      (void);
-      FUNC(void, CRY_CODE) CertificateVerify     (void);
-};
-
-FUNC(void, CRY_CODE) class_Cry_Unused::ProcessJob(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::ProcessJob(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::CancelJob(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::CancelJob(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeyElementSet(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeyElementSet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeyValidSet(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeyValidSet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeySetValid(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeySetValid(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeyElementGet(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeyElementGet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeyElementCopy(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeyElementCopy(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeyCopy(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeyCopy(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeyElementIdsGet(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeyElementIdsGet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::RandomSeed(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::RandomSeed(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeyGenerate(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeyGenerate(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeyDerive(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeyDerive(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeyExchangeCalcPubVal(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeyExchangeCalcPubVal(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::KeyExchangeCalcSecret(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::KeyExchangeCalcSecret(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::CertificateParse(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::CertificateParse(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Unused::CertificateVerify(void){
+FUNC(void, CRY_CODE) class_Cry_Functionality::CertificateVerify(void){
 }
 
 /******************************************************************************/
