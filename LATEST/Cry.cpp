@@ -7,6 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "Cry_core.hpp"
 #include "infCry_EcuM.hpp"
 #include "infCry_Dcm.hpp"
 #include "infCry_SchM.hpp"
