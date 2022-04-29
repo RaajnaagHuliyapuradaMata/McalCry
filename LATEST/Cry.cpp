@@ -7,10 +7,9 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "CfgCry.hpp"
 #include "Cry_core.hpp"
-#include "infCry_EcuM.hpp"
-#include "infCry_Dcm.hpp"
-#include "infCry_SchM.hpp"
+#include "infCry.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -44,6 +43,7 @@ class module_Cry:
       );
       FUNC(void, CRY_CODE) DeInitFunction (void);
       FUNC(void, CRY_CODE) MainFunction   (void);
+      CRY_CORE_FUNCTIONALITIES
 };
 
 extern VAR(module_Cry, CRY_VAR) Cry;
@@ -58,7 +58,6 @@ CONSTP2VAR(infSchMClient, CRY_VAR, CRY_CONST) gptrinfSchMClient_Cry = &Cry;
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
-#include "CfgCry.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */

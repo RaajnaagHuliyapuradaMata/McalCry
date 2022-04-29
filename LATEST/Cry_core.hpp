@@ -12,7 +12,7 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define CRY_COREFUNCTIONALITIES                                                \
+#define CRY_CORE_FUNCTIONALITIES                                               \
               FUNC(void, CRY_CODE) ProcessJob            (void);               \
               FUNC(void, CRY_CODE) CancelJob             (void);               \
               FUNC(void, CRY_CODE) KeyElementSet         (void);               \
@@ -30,7 +30,7 @@
               FUNC(void, CRY_CODE) CertificateParse      (void);               \
               FUNC(void, CRY_CODE) CertificateVerify     (void);               \
 
-#define CRY_COREFUNCTIONALITIES_VIRTUAL                                        \
+#define CRY_CORE_FUNCTIONALITIES_VIRTUAL                                       \
       virtual FUNC(void, CRY_CODE) ProcessJob            (void) = 0;           \
       virtual FUNC(void, CRY_CODE) CancelJob             (void) = 0;           \
       virtual FUNC(void, CRY_CODE) KeyElementSet         (void) = 0;           \
@@ -57,7 +57,7 @@
 /******************************************************************************/
 class class_Cry_Functionality{
    public:
-      CRY_COREFUNCTIONALITIES_VIRTUAL
+      CRY_CORE_FUNCTIONALITIES_VIRTUAL
 };
 
 /******************************************************************************/
