@@ -159,52 +159,52 @@ FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
 #endif
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::ProcessJob(void){
+FUNC(void, CRY_CODE) module_Cry::ProcessJob(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::CancelJob(void){
+FUNC(void, CRY_CODE) module_Cry::CancelJob(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeyElementSet(void){
+FUNC(void, CRY_CODE) module_Cry::KeyElementSet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeyValidSet(void){
+FUNC(void, CRY_CODE) module_Cry::KeyValidSet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeySetValid(void){
+FUNC(void, CRY_CODE) module_Cry::KeySetValid(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeyElementGet(void){
+FUNC(void, CRY_CODE) module_Cry::KeyElementGet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeyElementCopy(void){
+FUNC(void, CRY_CODE) module_Cry::KeyElementCopy(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeyCopy(void){
+FUNC(void, CRY_CODE) module_Cry::KeyCopy(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeyElementIdsGet(void){
+FUNC(void, CRY_CODE) module_Cry::KeyElementIdsGet(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::RandomSeed(void){
+FUNC(void, CRY_CODE) module_Cry::RandomSeed(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeyGenerate(void){
+FUNC(void, CRY_CODE) module_Cry::KeyGenerate(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeyDerive(void){
+FUNC(void, CRY_CODE) module_Cry::KeyDerive(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeyExchangeCalcPubVal(void){
+FUNC(void, CRY_CODE) module_Cry::KeyExchangeCalcPubVal(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::KeyExchangeCalcSecret(void){
+FUNC(void, CRY_CODE) module_Cry::KeyExchangeCalcSecret(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::CertificateParse(void){
+FUNC(void, CRY_CODE) module_Cry::CertificateParse(void){
 }
 
-FUNC(void, CRY_CODE) class_Cry_Functionality::CertificateVerify(void){
+FUNC(void, CRY_CODE) module_Cry::CertificateVerify(void){
 }
 
 /******************************************************************************/
