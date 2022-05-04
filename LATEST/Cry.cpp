@@ -113,7 +113,7 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  CRY_E_UNINIT
       );
 #endif
    }
@@ -133,7 +133,7 @@ FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  CRY_E_UNINIT
       );
 #endif
    }
@@ -152,7 +152,7 @@ FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  CRY_E_UNINIT
       );
 #endif
    }
