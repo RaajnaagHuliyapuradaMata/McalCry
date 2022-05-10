@@ -89,7 +89,10 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, CRY_CONFIG_DATA, CRY_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Cry_InitCheck)
-   if(E_OK != IsInitDone){
+   if(
+         E_OK
+      != IsInitDone
+   ){
 #endif
       if(NULL_PTR != lptrCfgModule){
          if(STD_HIGH){
@@ -127,7 +130,10 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
 
 FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
 #if(STD_ON == Cry_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == Cry_InitCheck)
       IsInitDone = E_NOT_OK;
@@ -147,7 +153,10 @@ FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
 
 FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
 #if(STD_ON == Cry_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == Cry_InitCheck)
    }
