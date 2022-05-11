@@ -9,7 +9,7 @@
 #include "Module.hpp"
 #include "CfgCry.hpp"
 #include "Cry_core.hpp"
-#include "infCry.hpp"
+#include "infCry_Exp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -32,6 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_Cry:
+   INTERFACES_EXPORTED_CRY
       public abstract_module
    ,  public class_Cry_Functionality
 {
