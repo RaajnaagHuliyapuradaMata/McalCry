@@ -32,7 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_Cry:
-   INTERFACES_EXPORTED_CRY
+      INTERFACES_EXPORTED_CRY
       public abstract_module
    ,  public class_Cry_Functionality
 {
