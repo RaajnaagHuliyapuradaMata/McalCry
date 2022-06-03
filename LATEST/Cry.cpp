@@ -10,6 +10,7 @@
 #include "CfgCry.hpp"
 #include "Cry_core.hpp"
 #include "infCry_Exp.hpp"
+#include "infCry_Imp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
