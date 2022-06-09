@@ -74,10 +74,10 @@ CONSTP2VAR(infSchMClient, CRY_VAR, CRY_CONST) gptrinfSchMClient_Cry = &Cry;
 VAR(module_Cry, CRY_VAR) Cry(
    {
 #if(STD_ON == _ReSIM)
-   char strModuleName[6] = "CRY";
+         "Cry"
 #else
 #endif
-         CRY_AR_RELEASE_VERSION_MAJOR
+      ,  CRY_AR_RELEASE_VERSION_MAJOR
       ,  CRY_AR_RELEASE_VERSION_MINOR
       ,  0x00
       ,  0xFF
