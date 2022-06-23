@@ -130,7 +130,9 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
 #endif
 }
 
-FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
+FUNC(void, CRY_CODE) module_Cry::DeInitFunction(
+   void
+){
 #if(STD_ON == Cry_InitCheck)
    if(
          E_OK
@@ -153,7 +155,9 @@ FUNC(void, CRY_CODE) module_Cry::DeInitFunction(void){
 #endif
 }
 
-FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
+FUNC(void, CRY_CODE) module_Cry::MainFunction(
+   void
+){
 #if(STD_ON == Cry_InitCheck)
    if(
          E_OK
@@ -175,52 +179,84 @@ FUNC(void, CRY_CODE) module_Cry::MainFunction(void){
 #endif
 }
 
-FUNC(void, CRY_CODE) module_Cry::ProcessJob(void){
+FUNC(void, CRY_CODE) module_Cry::ProcessJob(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::CancelJob(void){
+FUNC(void, CRY_CODE) module_Cry::CancelJob(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeyElementSet(void){
+FUNC(void, CRY_CODE) module_Cry::KeyElementSet(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeyValidSet(void){
+FUNC(void, CRY_CODE) module_Cry::KeyValidSet(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeySetValid(void){
+FUNC(void, CRY_CODE) module_Cry::KeySetValid(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeyElementGet(void){
+FUNC(void, CRY_CODE) module_Cry::KeyElementGet(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeyElementCopy(void){
+FUNC(void, CRY_CODE) module_Cry::KeyElementCopy(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeyCopy(void){
+FUNC(void, CRY_CODE) module_Cry::KeyCopy(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeyElementIdsGet(void){
+FUNC(void, CRY_CODE) module_Cry::KeyElementIdsGet(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::RandomSeed(void){
+FUNC(void, CRY_CODE) module_Cry::RandomSeed(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeyGenerate(void){
+FUNC(void, CRY_CODE) module_Cry::KeyGenerate(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeyDerive(void){
+FUNC(void, CRY_CODE) module_Cry::KeyDerive(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeyExchangeCalcPubVal(void){
+FUNC(void, CRY_CODE) module_Cry::KeyExchangeCalcPubVal(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::KeyExchangeCalcSecret(void){
+FUNC(void, CRY_CODE) module_Cry::KeyExchangeCalcSecret(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::CertificateParse(void){
+FUNC(void, CRY_CODE) module_Cry::CertificateParse(
+   void
+){
 }
 
-FUNC(void, CRY_CODE) module_Cry::CertificateVerify(void){
+FUNC(void, CRY_CODE) module_Cry::CertificateVerify(
+   void
+){
 }
 
 /******************************************************************************/
