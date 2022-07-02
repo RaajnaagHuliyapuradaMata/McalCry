@@ -82,12 +82,7 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgCry;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == Cry_DevErrorDetect)
