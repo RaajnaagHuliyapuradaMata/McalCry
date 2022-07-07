@@ -8,9 +8,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "infCry_EcuM.hpp"
-#include "infCry_Dcm.hpp"
 #include "infCry_Det.hpp"
-#include "infCry_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
