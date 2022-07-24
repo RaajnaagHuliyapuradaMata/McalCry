@@ -48,7 +48,8 @@ VAR(module_Cry, CRY_VAR) Cry;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, CRY_CODE) module_Cry::InitFunction(
-   CONSTP2CONST(CfgModule_TypeAbstract, CRY_CONFIG_DATA, CRY_APPL_CONST) lptrCfgModule
+      CONSTP2CONST(ConstModule_TypeAbstract, CRY_CONST,       CRY_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   CRY_CONFIG_DATA, CRY_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Cry_InitCheck)
    if(
@@ -56,8 +57,12 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
       != IsInitDone
    ){
 #endif
-      if(NULL_PTR != lptrCfgModule){
-         lptrCfg = lptrCfgModule;
+      if(
+            (NULL_PTR != lptrConstModule)
+         && (NULL_PTR != lptrCfgModule)
+      ){
+         lptrConst = lptrConstModule;
+         lptrCfg   = lptrCfgModule;
       }
       else{
 #if(STD_ON == Cry_DevErrorDetect)

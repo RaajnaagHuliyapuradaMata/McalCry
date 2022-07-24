@@ -7,6 +7,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "ConstCry.hpp"
 #include "CfgCry.hpp"
 #include "Cry_core.hpp"
 #include "infCry_Exp.hpp"
@@ -31,13 +32,15 @@ class module_Cry:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
+      const ConstCry_Type* lptrConst = (ConstCry_Type*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, CRY_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, CRY_CONFIG_DATA, CRY_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, CRY_CONST,       CRY_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   CRY_CONFIG_DATA, CRY_APPL_CONST) lptrCfgModule
       );
       FUNC(void, CRY_CODE) DeInitFunction (void);
       FUNC(void, CRY_CODE) MainFunction   (void);
