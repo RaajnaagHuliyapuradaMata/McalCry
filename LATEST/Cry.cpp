@@ -61,7 +61,7 @@ FUNC(void, CRY_CODE) module_Cry::InitFunction(
             (NULL_PTR != lptrConstModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = lptrConstModule;
+         lptrConst = (const ConstCry_Type*)lptrConstModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
