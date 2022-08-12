@@ -24,7 +24,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_McalCry:
-      INTERFACES_EXPORTED_CRY
+      INTERFACES_EXPORTED_MCALCRY
       public abstract_module
    ,  public class_McalCry_Functionality
 {
@@ -38,13 +38,13 @@ class module_McalCry:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-      FUNC(void, CRY_CODE) InitFunction(
-            CONSTP2CONST(ConstModule_TypeAbstract, CRY_CONST,       CRY_APPL_CONST) lptrConstModule
-         ,  CONSTP2CONST(CfgModule_TypeAbstract,   CRY_CONFIG_DATA, CRY_APPL_CONST) lptrCfgModule
+      FUNC(void, MCALCRY_CODE) InitFunction(
+            CONSTP2CONST(ConstModule_TypeAbstract, MCALCRY_CONST,       MCALCRY_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   MCALCRY_CONFIG_DATA, MCALCRY_APPL_CONST) lptrCfgModule
       );
-      FUNC(void, CRY_CODE) DeInitFunction (void);
-      FUNC(void, CRY_CODE) MainFunction   (void);
-      CRY_CORE_FUNCTIONALITIES
+      FUNC(void, MCALCRY_CODE) DeInitFunction (void);
+      FUNC(void, MCALCRY_CODE) MainFunction   (void);
+      MCALCRY_CORE_FUNCTIONALITIES
 };
 
 /******************************************************************************/
@@ -58,7 +58,7 @@ class module_McalCry:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-extern VAR(module_McalCry, CRY_VAR) McalCry;
+extern VAR(module_McalCry, MCALCRY_VAR) McalCry;
 
 /******************************************************************************/
 /* EOF                                                                        */

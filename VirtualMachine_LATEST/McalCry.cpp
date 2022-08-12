@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define CRY_AR_RELEASE_VERSION_MAJOR                                           4
-#define CRY_AR_RELEASE_VERSION_MINOR                                           3
+#define MCALCRY_AR_RELEASE_VERSION_MAJOR                                           4
+#define MCALCRY_AR_RELEASE_VERSION_MINOR                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(CRY_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible CRY_AR_RELEASE_VERSION_MAJOR!"
+#if(MCALCRY_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible MCALCRY_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(CRY_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible CRY_AR_RELEASE_VERSION_MINOR!"
+#if(MCALCRY_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible MCALCRY_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -42,14 +42,14 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_McalCry, CRY_VAR) McalCry;
+VAR(module_McalCry, MCALCRY_VAR) McalCry;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, CRY_CODE) module_McalCry::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, CRY_CONST,       CRY_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   CRY_CONFIG_DATA, CRY_APPL_CONST) lptrCfgModule
+FUNC(void, MCALCRY_CODE) module_McalCry::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, MCALCRY_CONST,       MCALCRY_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   MCALCRY_CONFIG_DATA, MCALCRY_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == McalCry_InitCheck)
    if(
@@ -83,14 +83,14 @@ FUNC(void, CRY_CODE) module_McalCry::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  CRY_E_UNINIT
+         ,  MCALCRY_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, CRY_CODE) module_McalCry::DeInitFunction(
+FUNC(void, MCALCRY_CODE) module_McalCry::DeInitFunction(
    void
 ){
 #if(STD_ON == McalCry_InitCheck)
@@ -108,14 +108,14 @@ FUNC(void, CRY_CODE) module_McalCry::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  CRY_E_UNINIT
+         ,  MCALCRY_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, CRY_CODE) module_McalCry::MainFunction(
+FUNC(void, MCALCRY_CODE) module_McalCry::MainFunction(
    void
 ){
 #if(STD_ON == McalCry_InitCheck)
@@ -132,89 +132,89 @@ FUNC(void, CRY_CODE) module_McalCry::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  CRY_E_UNINIT
+         ,  MCALCRY_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, CRY_CODE) module_McalCry::ProcessJob(
+FUNC(void, MCALCRY_CODE) module_McalCry::ProcessJob(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::McalCancelJob(
+FUNC(void, MCALCRY_CODE) module_McalCry::McalCancelJob(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeyElementSet(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeyElementSet(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeyValidSet(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeyValidSet(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeySetValid(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeySetValid(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeyElementGet(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeyElementGet(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeyElementCopy(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeyElementCopy(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeyCopy(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeyCopy(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeyElementIdsGet(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeyElementIdsGet(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::RandomSeed(
+FUNC(void, MCALCRY_CODE) module_McalCry::RandomSeed(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeyGenerate(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeyGenerate(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeyDerive(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeyDerive(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeyExchangeCalcPubVal(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeyExchangeCalcPubVal(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::KeyExchangeCalcSecret(
+FUNC(void, MCALCRY_CODE) module_McalCry::KeyExchangeCalcSecret(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::CertificateParse(
+FUNC(void, MCALCRY_CODE) module_McalCry::CertificateParse(
    void
 ){
 }
 
-FUNC(void, CRY_CODE) module_McalCry::CertificateVerify(
+FUNC(void, MCALCRY_CODE) module_McalCry::CertificateVerify(
    void
 ){
 }
