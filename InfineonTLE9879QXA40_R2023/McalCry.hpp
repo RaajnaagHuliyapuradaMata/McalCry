@@ -1,13 +1,13 @@
 #pragma once
 /******************************************************************************/
-/* File   : McalCry.hpp                                                           */
+/* File   : McalCry.hpp                                                       */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "ConstMcalCry.hpp"
+#include "infMcalCry_ServiceNvM_Types.hpp"
 #include "CfgMcalCry.hpp"
 #include "McalCry_core.hpp"
 #include "infMcalCry_Exp.hpp"
