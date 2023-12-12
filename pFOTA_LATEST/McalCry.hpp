@@ -16,7 +16,7 @@ extern "C"
 #include "vstdlib.hpp"
 #endif
 
-#define MCALCRY_VENDOR_ID                                    (30u)
+#define MCALCRY_VENDOR_ID                                    (1u)
 #define MCALCRY_MODULE_ID                                    (114u)
 #define MCALCRY_INSTANCE_ID                                  (0u)
 
